@@ -1,0 +1,180 @@
+body {
+    margin: 0;
+    background-image: url(../images/cat_background.png);
+    background-repeat: repeat;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+@font-face {
+    font-family: "Dancing Script";
+    src: url("/fonts/DancingScript-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: "Comfortaa";
+    src: url("/fonts/Comfortaa-VariableFont_wght.ttf");
+}
+
+.container {
+    width: 80%;
+    margin: 10px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.carousel {
+    border: 2px solid #ccc;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    height: 100%;
+    display: flex;
+    width: 400%;
+    transition: all 0.3s;
+}
+
+.slider section {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 48px;
+}
+
+.arrow.left {
+    left: 20px;
+}
+
+.arrow.right {
+    right: 20px;
+}
+
+.controls ul {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.controls ul li {
+    width: 14px;
+    height: 14px;
+    border: 2px solid #333;
+    border-radius: 50px;
+    margin: 10px;
+    background: #333;
+    cursor: pointer;
+}
+
+.controls ul li.selected {
+    background: transparent;
+}
+
+header {
+    background-image: url(../images/cat-banner.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    padding-top: 20px;
+    position: relative;
+}
+
+header ul {
+    display: flex;
+    position: absolute;
+    gap: 2em;
+    bottom: 20px;
+    left: 8%;
+    font-family: "Comfortaa", sans-serif;
+   
+}
+
+header nav li {
+    list-style: none;
+}
+
+header nav li a {
+    margin: 10px;   
+    border-radius: 5px;
+}
+
+header nav li a:hover {
+    background-color: rgba(98, 88, 78);
+    color: #fff;
+    margin: 0px;
+    padding: 10px;
+}
+
+.header-title {
+    margin-left: 10%;
+    font-size: 54px;
+    font-family: "Dancing Script", cursive;
+}
+
+.trending {
+    margin-left: 10%;
+    font-family: "Comfortaa", sans-serif;
+}
+
+footer {
+    background-color: #97c2e4;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    padding-bottom: 2em;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    gap: 2%;
+}
+
+.index-card {
+    width: 600px;
+    height: 300px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 1em;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.cat-gallery {
+    background-image: url(/images/cat_gallery.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.cat-gallery h2 {
+    color: #fff;
+    font-family: "Dancing Script", cursive;
+    font-size: 54px;
+    text-align: center;
+    padding: 1px;
+    background-color: rgba(98, 88, 78, 0.8);
+    border-radius: 10px;
+}
