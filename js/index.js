@@ -30,3 +30,30 @@ leftArrow.addEventListener("click", function() {
     setIndex();
     indicatorParents.children[sectionIndex].classList.add("selected");
 });
+
+import { url } from "./fetch.js";
+const sliderContainer = document.querySelector(".slider");
+
+sliderContainer.innerHTML = `<div class="loading-indicator">`;
+
+async function getSlide() {
+    try {
+        const response = await fetch(url);
+        const results = await response.json();
+    
+        sliderContainer.innerHTML = "";
+
+        const slides = results;
+        slides.slice(0, 4).forEach(function(slide) {
+            sliderContainer.innerHTML += `<a href="html/blogpost.html?id=${slide.id}">
+                                        <section class="pc-index">
+                                            <img src="${slide.jetpack_featured_media_url}">
+                                            <h2>${slide.title.rendered}</h2>
+                                        </section></a>`;
+        });
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+getSlide();

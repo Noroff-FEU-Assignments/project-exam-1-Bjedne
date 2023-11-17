@@ -19,31 +19,58 @@ a {
     src: url("/fonts/Comfortaa-VariableFont_wght.ttf");
 }
 
+h1 { font-size: 34px; font-family: "Comfortaa", cursive;}
+h2 { font-size: 32px; font-family: "Dancing Script", cursive;}
+h3 { font-size: 24px;}
+p { font-size: 20px; font-family: "Comfortaa", sans-serif;}
+
+/* Index Page */
+
 .container {
-    width: 80%;
+    width: 70%;
     margin: 10px auto;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .carousel {
     border: 2px solid #ccc;
+    width: 100%;
     height: 400px;
     position: relative;
     overflow: hidden;
 }
 
-.slider {
-    height: 100%;
+.pc-index {
     display: flex;
-    width: 400%;
-    transition: all 0.3s;
+    background-color: #97c2e4;
+    border-radius: 15px;
+    padding: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 650px;
 }
 
-.slider section {
-    flex-basis: 100%;
-    display: flex;
-    justify-content: center;
+.pc-index img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    align-self: center;
+}
+
+.pc-index h2 {
+    font-size: 38px;
+    align-self: center;
+    width: 50%;
+    margin-left: 10px;
+}
+
+.slider {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    justify-items: center;
+    width: 400%;
+    transition: all 0.3s;
     align-items: center;
 }
 
@@ -88,6 +115,8 @@ a {
     background: transparent;
 }
 
+/* Header */
+
 header {
     background-image: url(../images/cat-banner.jpg);
     background-size: cover;
@@ -130,9 +159,11 @@ header nav li a:hover {
 }
 
 .trending {
-    margin-left: 10%;
+    margin-left: 20%;
     font-family: "Comfortaa", sans-serif;
 }
+
+/* Footer */
 
 footer {
     background-color: #97c2e4;
@@ -153,6 +184,7 @@ footer {
 }
 
 .index-card {
+    text-align: center;
     width: 600px;
     height: 300px;
     border: 2px solid #ccc;
@@ -163,6 +195,17 @@ footer {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+.index-card h2 {
+    padding: 10px;
+    background-color: rgba(98, 88, 78, 0.8);
+    border-radius: 10px;
+    color: #fff;
+}
+
+.cat-quiz {
+    background-image: url("/images/cat_laying.jpg");
+}
+
 .cat-gallery {
     background-image: url(/images/cat_gallery.jpg);
     background-size: cover;
@@ -170,11 +213,106 @@ footer {
 }
 
 .cat-gallery h2 {
-    color: #fff;
-    font-family: "Dancing Script", cursive;
     font-size: 54px;
-    text-align: center;
-    padding: 1px;
-    background-color: rgba(98, 88, 78, 0.8);
-    border-radius: 10px;
 }
+
+.cat-quiz a {
+    text-decoration: underline;
+}
+
+.about-layout {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    margin: 2em auto;
+    width: 80%;
+    background-color: #97c2e4;
+    border-radius: 50px;
+}
+
+.about-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2em;
+}
+
+.about-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+}
+
+.about-item {
+    margin: auto;
+    margin-top: 7em;
+    max-width: 80%;
+}
+
+/* Posts Page */
+
+.posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 5em;
+}
+
+.post-card {
+    display: flex;
+    background-color: #97c2e4;
+    align-items: center;
+    border-radius: 15px;
+    margin: 2em;
+    padding: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    column-gap: 2em;
+    height: 80%;
+}
+
+.post-card img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    align-self: center;
+}
+
+.post-card h2 {
+    font-size: 38px;
+    align-self: center;
+    width: 50%;
+}
+
+
+
+/* Blog Post Page */
+
+.blogpost {
+    background-color: #97c2e4F2;
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: auto auto;
+    border-radius: 50px;
+    width: 80%;
+    margin: 2em auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.blogpost img {
+    width: 40%;
+    height: 40%;
+    object-fit: cover;
+}
+
+.blogpost-content {
+    width: 70%;
+    padding: 2em;
+    font-size: 28px;
+    font-family: "Comfortaa", sans-serif;
+}
+
+.larger {
+    font-size: 42px;
+} 
+
