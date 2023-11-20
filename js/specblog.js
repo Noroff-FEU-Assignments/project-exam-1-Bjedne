@@ -14,6 +14,7 @@ async function getBlog() {
 }
 
 const blogpost = document.querySelector(".bloginsert");
+const blogTitle = document.querySelector("title");
 
 blogpost.innerHTML = `<div class="loading-indicator"></div>`;
 
@@ -30,6 +31,7 @@ blogpost.innerHTML = `<div class="loading-indicator"></div>`;
                                 <span class="close">&times;</span>
                                 <img class="modal-content" id="img01">
                                 </dialog>`;
+        blogTitle.innerHTML = `Kitty Corner | ${blog.title.rendered}`;
     } catch (error) {
         console.log(error);
     }

@@ -1,22 +1,25 @@
 import { getPosts } from "./fetch.js";
 
-const postsLoading = document.querySelector("main")
+const postsLoading = document.querySelector(".posts")
 
 postsLoading.innerHTML = `<div class="loading-indicator"></div>`;
 
+
 getPosts();
+
 
 const loadmore = document.querySelector("#load-btn");
     let currentItems = 10;
     loadmore.addEventListener("click", (e) => {
-        const elementBlog = [...document.querySelectorAll(".posts .post-card")];
+        const elementBlog = [...document.querySelectorAll(".posts a")];
         for (let i = currentItems; i < currentItems + 10; i++) {
             if (elementBlog[i]) {
-                elementBlog[i].style.display = "flex";
+                elementBlog[i].style.display = "block";
             }
         }
-        currentItems += 20;
+        currentItems += 10;
         if (currentItems >= elementBlog.length) {
-            event.target.style.display = "none";
+            e.target.style.display = "none";
         }
     });
+

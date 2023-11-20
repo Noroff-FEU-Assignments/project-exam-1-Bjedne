@@ -285,7 +285,7 @@ input, textarea {
 }
 
 .post-card {
-    display: none;
+    display: flex;
     background-color: #97c2e4;
     align-items: center;
     border-radius: 15px;
@@ -296,8 +296,8 @@ input, textarea {
     height: 80%;
 }
 
-.posts #bloglist:nth-child(1) {
-    display: flex;
+.posts a:nth-child(10) ~ * {
+    display: none;
 }
 
 .post-card img {
