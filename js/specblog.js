@@ -23,9 +23,13 @@ blogpost.innerHTML = `<div class="loading-indicator"></div>`;
         blogpost.innerHTML = "";
         blogpost.innerHTML += `<div class="blogpost">
                                     <h1>${blog.title.rendered}</h1>
-                                    <img src="${blog.jetpack_featured_media_url}">
+                                    <img id="imgModal" src="${blog.jetpack_featured_media_url}">
                                     <div class="blogpost-content">${blog.content.rendered}</div>
-                                </div>`;
+                                </div>
+                                <dialog id="modal" class="modal">
+                                <span class="close">&times;</span>
+                                <img class="modal-content" id="img01">
+                                </dialog>`;
     } catch (error) {
         console.log(error);
     }
@@ -33,3 +37,28 @@ blogpost.innerHTML = `<div class="loading-indicator"></div>`;
 
 specBlog();
 
+async function openModal() {
+    await specBlog();
+    var modal = document.getElementById("modal");
+
+    var img = document.getElementById("imgModal");
+    var modalImg = document.getElementById("img01");
+    img.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+    }
+
+    var span = document.getElementsByClassName("close")[0];
+
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+}
+
+openModal();
+
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}

@@ -7,6 +7,7 @@
     <meta name="description" content="Please reach out if you have any questions.">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..40,100..700,0..1,-50..200" />
+    <script src="../js/formvalid.js" defer></script>
 </head>
 <body>
     <header>
@@ -22,26 +23,18 @@
     </header>
     <main class="about-layout contact-layout">
        <form class="contact-container">
-            <label for="name">Full name</label>
-            <input id="name" type="text" placeholder="Name">
-                <div id="error-name" class="form-error">
-                    <p>Name must be more than five characters long</p>
-                </div>
+            <label for="fullName">Full name</label>
+            <input id="fullName" type="text" placeholder="Name">
+                <div id="errorName" class="form-error">Name must be more than five characters long</div>
             <label for="email">Email</label>
             <input id="email" type="email" placeholder="Email">
-                <div id="error-email" class="form-error">
-                    <p>Email address must be valid</p>
-                </div>
+                <div id="errorEmail" class="form-error">Email address must be valid</div>
             <label for="Subject">Subject</label>
             <input id="subject" type="text" placeholder="Subject">
-                <div id="error-subject" class="form-error">
-                    <p>Subject must be more than 15 characters long</p>
-                </div>
+                <div id="errorSubject" class="form-error">Subject must be more than 15 characters long</div>
             <label for="message">Message</label>
             <textarea id="message" placeholder="Message"></textarea>
-                <div id="error-message" class="form-error">
-                    <p>Message must be more than 25 characters long</p>
-                </div>
+                <div id="errorMessage" class="form-error">Message must be more than 25 characters long</div>
             <input class="contact-btn" id="submit" type="submit" value="Submit">
        </form>
        <div>
