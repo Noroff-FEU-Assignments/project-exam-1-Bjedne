@@ -115,6 +115,61 @@ p { font-size: 20px; font-family: "Comfortaa", sans-serif;}
     background: transparent;
 }
 
+.index-card {
+    text-align: center;
+    width: 600px;
+    height: 300px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 1em;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.index-card h2 {
+    padding: 10px;
+    background-color: rgba(98, 88, 78, 0.8);
+    border-radius: 10px;
+    color: #fff;
+}
+
+.cat-quiz {
+    background-image: url("/images/cat_laying.jpg");
+}
+
+.cat-gallery {
+    background-image: url(/images/cat_gallery.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.cat-gallery h2 {
+    font-size: 54px;
+}
+
+.cat-quiz a {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        display: none;
+    }
+
+    .cards {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .index-card {
+        width: 80%;
+        height: 250px;
+    }
+    
+}
+
 /* Header */
 
 header {
@@ -158,6 +213,61 @@ header nav li a:hover {
     font-family: "Dancing Script", cursive;
 }
 
+@media screen and (min-width: 769px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+header ul {
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+}
+
+.navItem {
+    color: white;
+    font-size: 28px;
+}
+    
+.hamburger {
+    position: fixed;
+    z-index: 100;
+    left: 20px;
+    padding: 4px;
+    border-color: #97c2e4;
+    border-radius: 4px;
+    background-color: rgb(98, 88, 78);
+    color: white;
+    cursor: pointer;
+}
+
+.closeIcon {
+    display: none;
+}
+
+.navList {
+    position: fixed;
+    transform: translateY(-110%);
+    transition: transform 0.2s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 60%;
+    z-index: 99;
+    background:rgb(98, 88, 78);
+    color: white;
+    list-style: none;
+    padding-top: 4rem;
+}
+
+.showMenu {
+    transform: translateY(0);
+}
+
+}
+
 .trending {
     margin-left: 20%;
     font-family: "Comfortaa", sans-serif;
@@ -183,42 +293,7 @@ footer {
     gap: 2%;
 }
 
-.index-card {
-    text-align: center;
-    width: 600px;
-    height: 300px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 1em;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
 
-.index-card h2 {
-    padding: 10px;
-    background-color: rgba(98, 88, 78, 0.8);
-    border-radius: 10px;
-    color: #fff;
-}
-
-.cat-quiz {
-    background-image: url("/images/cat_laying.jpg");
-}
-
-.cat-gallery {
-    background-image: url(/images/cat_gallery.jpg);
-    background-size: cover;
-    background-position: center;
-}
-
-.cat-gallery h2 {
-    font-size: 54px;
-}
-
-.cat-quiz a {
-    text-decoration: underline;
-}
 
 .about-layout {
     display: grid;

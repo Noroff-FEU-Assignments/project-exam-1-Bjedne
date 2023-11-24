@@ -1,5 +1,4 @@
 const slider = document.querySelector(".slider");
-
 const leftArrow = document.querySelector(".left");
 const rightArrow = document.querySelector(".right");
 const indicatorParents = document.querySelector(".controls ul");
@@ -57,3 +56,13 @@ async function getSlide() {
 }
 
 getSlide();
+
+import {toggleMenu} from "./hamburger.js";
+
+hamburger.addEventListener("click", toggleMenu);
+
+menuItems.forEach( 
+    function(menuItem) { 
+      menuItem.addEventListener("click", toggleMenu);
+    }
+  )

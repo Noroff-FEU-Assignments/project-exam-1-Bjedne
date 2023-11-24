@@ -1,4 +1,13 @@
 import { getPosts } from "./fetch.js";
+import {toggleMenu} from "./hamburger.js";
+
+hamburger.addEventListener("click", toggleMenu);
+
+menuItems.forEach( 
+    function(menuItem) { 
+      menuItem.addEventListener("click", toggleMenu);
+    }
+  )
 
 const postsLoading = document.querySelector(".posts")
 
