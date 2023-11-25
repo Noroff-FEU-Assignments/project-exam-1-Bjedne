@@ -1,13 +1,5 @@
 import {toggleMenu} from "./hamburger.js";
 
-hamburger.addEventListener("click", toggleMenu);
-
-menuItems.forEach( 
-    function(menuItem) { 
-      menuItem.addEventListener("click", toggleMenu);
-    }
-  )
-
 const form = document.querySelector(".contact-container")
 const fullName = document.querySelector("#fullName")
 const errorName = document.querySelector("#errorName")
@@ -65,4 +57,12 @@ function validateEmail(email) {
     const patternMatches = regEx.test(email);
     return patternMatches;
 }
+
+hamburger.addEventListener("click", toggleMenu);
+
+menuItems.forEach( 
+    function(menuItem) { 
+      menuItem.addEventListener("click", toggleMenu);
+    }
+  )
 

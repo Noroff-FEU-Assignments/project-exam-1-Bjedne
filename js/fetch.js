@@ -16,7 +16,7 @@ async function getPosts() {
                                         <div class="post-card">
                                         <img src="${post.jetpack_featured_media_url}">
                                         <h2>${post.title.rendered}</h2>
-                                        <span class="material-symbols-outlined larger">arrow_forward</span>
+                                        <span class="material-symbols-outlined larger mobileArrow">arrow_forward</span>
                                         </div></a>`;
         });
     } catch (error) {
