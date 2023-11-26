@@ -22,7 +22,7 @@ a {
 h1 { font-size: 34px; font-family: "Comfortaa", cursive;}
 h2 { font-size: 32px; font-family: "Dancing Script", cursive;}
 h3 { font-size: 24px;}
-p { font-size: 20px; font-family: "Comfortaa", sans-serif;}
+p { font-size: 20px; font-family: "Comfortaa", sans-serif; line-height: 1.5;}
 
 @media screen and (max-width: 768px) {
     h1 { font-size: 30px;}
@@ -558,6 +558,15 @@ input, textarea {
     padding: 1em;
     font-size: 28px;
     font-family: "Comfortaa", sans-serif;
+}
+
+ol {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+ol li {
+    margin: 1em 0;
 }
 
 .larger {
