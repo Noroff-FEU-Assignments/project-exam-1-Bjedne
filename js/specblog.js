@@ -27,7 +27,7 @@ blogpost.innerHTML = `<div class="loading-indicator"></div>`;
         blogpost.innerHTML = "";
         blogpost.innerHTML += `<div class="blogpost">
                                     <h1>${blog.title.rendered}</h1>
-                                    <img id="imgModal" src="${blog.jetpack_featured_media_url}">
+                                    <img id="imgModal" src="${blog.jetpack_featured_media_url} alt="${blog.title.rendered}">
                                     <div class="blogpost-content">${blog.content.rendered}</div>
                                 </div>
                                 <dialog id="modal" class="modal">

@@ -14,7 +14,7 @@ async function getPosts() {
         posts.forEach(function(post) {
             postContainer.innerHTML += `<a id="bloglist" class="post-item" href="blogpost.html?id=${post.id}">
                                         <div class="post-card">
-                                        <img src="${post.jetpack_featured_media_url}">
+                                        <img src="${post.jetpack_featured_media_url}" alt="${post.title.rendered}">
                                         <h2>${post.title.rendered}</h2>
                                         <span class="material-symbols-outlined larger mobileArrow">arrow_forward</span>
                                         </div></a>`;
