@@ -9,38 +9,51 @@ const subject = document.querySelector("#subject")
 const errorSubject = document.querySelector("#errorSubject")
 const message = document.querySelector("#message")
 const errorMessage = document.querySelector("#errorMessage")
-
+let nameValid = false;
+let emailValid = false;
+let subjectValid = false;
+let messageValid = false;
 
 function validateForm() {
+
+
     if (checkLength(fullName.value, 5) === true) {
         errorName.style.display = "none";
+        nameValid = true;
     } else {
         errorName.style.display = "block";
-        event.preventDefault();
     }
 
     if (validateEmail(email.value) === true) {
         errorEmail.style.display = "none";
+        emailValid = true;
     } else {
         errorEmail.style.display = "block";
-        event.preventDefault();
     }
 
     if (checkLength(subject.value, 15) === true) {
         errorSubject.style.display = "none";
+        subjectValid = true;
     } else {
         errorSubject.style.display = "block";
-        event.preventDefault();
     }
 
     if (checkLength(message.value, 25) === true) {
         errorMessage.style.display = "none";
+        messageValid = true;
     } else {
-        errorMessage.style.display = "block";
+        errorMessage.style.display = "block"; 
+    }
+    if (nameValid && emailValid && subjectValid && messageValid) {
+        alert("Message submitted. Thank you for contacting us!");
+        form.reset();
+    } else {
         event.preventDefault();
     }
     
 }
+
+
 
 form.addEventListener("submit", validateForm);
 
