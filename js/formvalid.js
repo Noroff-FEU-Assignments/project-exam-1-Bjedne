@@ -15,8 +15,6 @@ let subjectValid = false;
 let messageValid = false;
 
 function validateForm() {
-
-
     if (checkLength(fullName.value, 5) === true) {
         errorName.style.display = "none";
         nameValid = true;
@@ -50,10 +48,7 @@ function validateForm() {
     } else {
         event.preventDefault();
     }
-    
 }
-
-
 
 form.addEventListener("submit", validateForm);
 
