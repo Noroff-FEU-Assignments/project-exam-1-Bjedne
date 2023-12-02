@@ -46,7 +46,7 @@ async function getSlide() {
         slides.slice(0, 4).forEach(function(slide) {
             sliderContainer.innerHTML += `<a href="html/blogpost.html?id=${slide.id}">
                                         <section class="pc-index">
-                                            <img src="${slide.jetpack_featured_media_url}">
+                                            <img src="${slide.jetpack_featured_media_url}" alt="${slide.title.rendered}">
                                             <h2>${slide.title.rendered}</h2>
                                         </section></a>`;
         });

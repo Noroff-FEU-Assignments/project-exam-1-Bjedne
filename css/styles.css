@@ -192,10 +192,6 @@ p { font-size: 20px; font-family: "Comfortaa", sans-serif; line-height: 1.5;}
 }
 
 @media screen and (max-width: 768px) {
-    .container {
-        
-    }
-
     .mobileArrow {
         display: none;
     }
@@ -258,7 +254,7 @@ header nav li a:hover {
 
 .header-title {
     margin-left: 10%;
-    font-size: 54px;
+    font-size: 58px;
     font-family: "Dancing Script", cursive;
 }
 
@@ -501,6 +497,7 @@ input, textarea {
     height: 200px;
     object-fit: cover;
     align-self: center;
+    border-radius: 15px;
 }
 
 .post-card h2 {
