@@ -1,4 +1,5 @@
 # Kitty Corner Project Exam
+![kitty_corner](https://github.com/NoroffFEU/portfolio-1-example/assets/126247097/58267dfc-5abc-4e38-a6da-4d6443e30a5f)
 
 The purpose of this project was to make a website for a blog about cats with funny and informative posts.
 
